@@ -7,9 +7,83 @@
   /* --main-line-height : 1.5; */
 }
 
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT-Bold.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT-Bold.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT-Light.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT-Medium.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT-Medium.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url('../fonts/FuturaPT-Book.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url('../fonts/FuturaPT-Book.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT-Light.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* General */
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 html {
@@ -25,13 +99,21 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
   margin: 0;
   padding: 0;
+  font-family: "Futura PT";
+  background-image: url(../images/bg.png);
+  background-repeat: repeat;
+  background-color: #f9f9f9;
+
   /* font-family: "Roboto", "Arial", sans-serif; */
   /* font-size: 16px; */
   /* font-weight: 400; */
   /* line-height: var(--main-line-height); */
 }
+
+
 
 .visually-hidden {
   position: absolute;
@@ -48,12 +130,557 @@ body {
 
 /* Container */
 .container {
-  /* max-width: your-size-here; */
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1340px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Sticky-Footer */
 .site-main {
   flex-grow: 1;
 }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top__address {
+  margin-right: 120px;
+  margin-left: 200px;
+  position: relative;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+
+}
+
+.header-top__address::before {
+  content: "";
+  background-image: url(../images/house.svg);
+  background-size: cover;
+  position: absolute;
+  width: 14px;
+  height: 13px;
+  margin-left: -22px;
+  top: 2px;
+}
+
+.header-top__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  margin-left: -170px;
+}
+
+.header-top__list::before {
+  content: "";
+  background-image: url(../images/phone.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 13px;
+  height: 13px;
+  margin-right: 9px;
+}
+
+.header-top__menu {
+  margin-right: 22px;
+  position: relative;
+}
+
+.header-top__menu:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/span.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 4px;
+  height: 4px;
+  top: 8px;
+  right: -12px;
+}
+
+.header-top__menu:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/span.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 4px;
+  height: 4px;
+  top: 8px;
+  left: -12px;
+}
+
+.header-top__href {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+
+}
+
+.header-top__time {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}
+
+
+.header-top__time:nth-child(1)::before {
+  content: "";
+  background-image: url(../images/time.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin-left: -22px;
+  top: 2px;
+
+}
+
+.header-top__time:nth-child(2) {
+  margin-left: 22px;
+
+}
+
+/* site bottom start */
+
+.site-bottom {
+  background-color: #fff;
+  position: relative;
+  padding: 20px 0;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: relative; */
+}
+
+.site-bottom__img {
+  position: absolute;
+  top: -20px;
+}
+
+.site-bottom__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-bottom__list {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  width: 700px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.site-bottom__list::before {
+  content: "";
+  background-image: url(../images/fish.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 14px;
+  height: 14px;
+  margin-left: -30px;
+  top: 4px;
+  position: absolute;
+}
+
+.site-bottom__menu {
+  margin-right: 45px;
+}
+
+.site-bottom__menu:nth-child(6) {
+  margin-right: 0;
+}
+
+.site-bottom__btn {
+  position: relative;
+}
+
+.site-bottom__index::before {
+  content: "";
+  background-image: url(../images/panja.svg);
+  background-size: cover;
+  width: 23px;
+  height: 20px;
+  position: absolute;
+  left: -25px;
+}
+
+#hero {
+  background-image: url("../images/zabotim.png"), url("../images/to\'tiqush.png");
+  background-repeat: no-repeat;
+  background-size: 830px 800px, 350px 430px;
+  padding: 153px 0px 311px 465px;
+  background-position: calc(50% + -470px) calc(50% - 70px), calc(50% + 615px) calc(50% + 200px);
+}
+
+.hero-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-section__card {
+  /* margin-top: 160px; */
+  width: 620px;
+  margin-right: 60px;
+  /* position: absolute; */
+}
+
+.hero-section__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 64px;
+  color: #333333;
+}
+
+.hero-section__span {
+  color: #78C0DE;
+}
+
+.hero-section__text {
+  width: 495px;
+  margin-bottom: 38px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #949494;
+}
+
+.hero-section__href {
+  padding: 15px 48px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  background-color: #333333;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.quote {
+  padding: 0 0 95px 0;
+}
+
+.quote__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 0 35px 0;
+  position: relative;
+}
+
+.quote__wrapper::before {
+  content: "";
+  width: 140px;
+  height: 2px;
+  position: absolute;
+  top: -43px;
+  left: 550px;
+  background-color: #dbdbdb;
+}
+
+
+.quote__wrapper::after {
+  content: "";
+  width: 140px;
+  height: 2px;
+  position: absolute;
+  /* top: -43px; */
+  bottom: -35px;
+  left: 550px;
+  background-color: #dbdbdb;
+}
+
+
+.quote__block {
+  margin: 0 auto;
+  width: 753px;
+  text-align: center;
+  position: relative;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #949494;
+}
+
+.quote__block::before {
+  content: "";
+  background-image: url("../images/leftvergul.svg");
+  background-repeat: no-repeat;
+  width: 142px;
+  height: 128px;
+  background-position: center;
+  position: absolute;
+  left: -140px;
+  top: -80px;
+}
+
+.quote__block::after {
+  content: "";
+  background-image: url("../images/rightvergul.svg");
+  background-repeat: no-repeat;
+  width: 142px;
+  height: 128px;
+  background-position: center;
+  position: absolute;
+  right: -140px;
+  top: -5px;
+}
+
+.quote__text {
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+
+}
+
+
+
+.services__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 54px;
+  color: #333333;
+
+}
+
+.card-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1223px;
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.card-list::before {
+  content: "";
+  background-image: url(../images/lefticon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 14px;
+  height: 25px;
+  margin-left: -35px;
+  position: absolute;
+}
+
+.card-list::after {
+  content: "";
+  background-image: url(../images/righticon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 14px;
+  height: 25px;
+  right: 30px;
+  position: absolute;
+}
+
+.card-list__item {
+  margin: 0 13px 0 0;
+  width: 193px;
+  height: 201px;
+  flex-shrink: 0;
+  padding: 30px 34px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+}
+
+.services {
+  padding: 10px 0;
+}
+
+.card-list__images {
+  margin: 0 auto;
+}
+
+.card-list__link::before {
+  font-family: 'Futura PT';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+}
+
+.services-wrapper {
+  width: 1223px;
+  margin: 0 auto;
+  display: flex;
+  background-color: #fff;
+  padding: 41px 35px;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+
+.services-wrapper__card {
+  margin-left: 67px;
+}
+
+.services-wrapper__titlee {
+  width: 335px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 20px;
+  color: #333333;
+}
+
+.services-wrapper__text {
+  width: 492px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #949494;
+}
+
+.services-wrapper__href {
+  margin-top: 32px;
+}
+
+.services-wrapper__links {
+  position: relative;
+  margin-right: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 15px 36px 15px 63px;
+  background-color: #FFBD54;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.services-wrapper__links::before {
+  content: "";
+  background-image: url(../images/money.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  left: 30px;
+}
+
+.services-wrapper__link {
+  position: relative;
+  padding: 15px 37px 15px 64px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  background: #333333;
+  border-radius: 3px;
+  color: #FFFFFF;
+}
+
+.services-wrapper__link::after {
+  content: "";
+  background-image: url(../images/document.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  left: 30px;
+}
+
+.email{
+  margin-top: 235px;
+  margin-bottom: 216px;
+  background-image: url(../images/bgdog.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 308px;
+  z-index: 1;
+}
+
+.card-list__item--active {
+  margin-bottom: 0;
+  border: none;
+}
+
+.email__wrapper{
+  padding: 90px 0 88px 0;
+  margin-left: 200px;
+  position: relative;
+}
+
+.email__wrapper::after {
+  content: "";
+  background-image: url(../images/dog.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  /* background-size: 613px 481px; */
+  width: 613px;
+  height: 481px;
+  top: -108px;
+  right: -30px;
+  z-index: 3;
+}
+
+.email__text {
+  margin: 0 auto;
+  padding-bottom: 32px;
+font-weight: 700;
+font-size: 48px;
+line-height: 20px;
+color: #fff;
+}
+
+.email__input {
+  margin-right: 21px;
+  padding: 18px 147px 12px 22px;
+  background-color: #FFFFFF;
+border-radius: 5px;
+border: none;
+  outline: none;
+}
+
+.email__btn {
+  padding: 12px 53px 12px 51px;
+font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+background-color: #333333;
+border-radius: 3px;
+border: none;
+cursor: pointer;
+color: #FFFFFF;
+}
+
+/* 
+.card-list__link::before {
+  content: "";
+  width: 86px;
+  height: 80px;
+  background-image: url("../images/pervichniy.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+} */
+/* site bottom start */
