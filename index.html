@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template Project</title>
+  <title>Clinic vetinary</title>
   <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
-  <!-- <link rel="stylesheet" href="./css/main.css"> -->
-  <link rel="stylesheet" href="./css/main.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
 </head>
 
 <body>
@@ -41,7 +41,7 @@
   <div class="container">
       <div class="site-nav">
     <div class="logo">
-      <a class="site-bottom__href" href="index.html"><img class="site-bottom__img" src="./images/logo.svg"
+      <a class="site-bottom__href" href="#"><img class="site-bottom__img" src="./images/logo.svg"
         width="177"
         height="86"
          alt="logo"></a>
@@ -49,28 +49,28 @@
          <nav class="site-bottom__navbar">
           <ul class="site-bottom__list">
             <li class="site-bottom__menu">
-              <a class="site-bottom__href" href="index.html">Главная</a>
+              <a class="site-bottom__href" href="#">Главная</a>
             </li>
 
             <li class="site-bottom__menu">
-              <a class="site-bottom__href" href="index.html">О Клинике</a>
+              <a class="site-bottom__href" href="#">О Клинике</a>
             </li>
 
             <li class="site-bottom__menu">
-              <a class="site-bottom__href" href="index.html">Наши Услуги</a>
+              <a class="site-bottom__href" href="./services.html">Наши Услуги</a>
             </li>
   
             <li class="site-bottom__menu">
-              <a class="site-bottom__href" href="index.html">Полезные Статьи</a>
+              <a class="site-bottom__href" href="#">Полезные Статьи</a>
             </li>
 
             <li class="site-bottom__menu">
-              <a class="site-bottom__href" href="index.html">FAQ</a>
+              <a class="site-bottom__href" href="#">FAQ</a>
             </li>
 
             
             <li class="site-bottom__menu">
-              <a class="site-bottom__href" href="index.html">Контакты</a>
+              <a class="site-bottom__href" href="#">Контакты</a>
             </li>
 
 
@@ -78,7 +78,7 @@
          </nav>
 
          <div class="site-bottom__btn">
-          <a class="site-bottom__index" href="index.html">Задать вопрос</a>
+          <a class="site-bottom__index" href="#">Задать вопрос</a>
          </div>
   </div>
   </div>
@@ -495,6 +495,53 @@
   </footer>
   <!-- End of Footer Section-->
 
+  <div class="modals">
+    <div class="modal-show__box">
+        <div class="modal-show__right">
+
+            <button class="modal-show__close">
+                <img src="./images/icons.svg" width="18"
+                height="18"
+                 alt="Close ask">
+            </button>
+
+            
+        <span class="modal-show__right-text">
+            Авторизация:
+        </span>
+
+        <a class="modal-show__right-link" href="https://www.google.com/">
+            Войти через Google
+        </a>
+
+        <a class="modal-show__right-link" href="https://www.facebook.com/campaign/landing.php?campaign_id=11554070363&extra_1=s%7Cc%7C477437435741%7Ce%7Cfacebook%7C&placement=&creative=477437435741&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D11554070363%26adgroupid%3D112923417056%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D1028523%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjwz96WBhC8ARIsAATR252usA1aONLokxRsC5xET-z3SJTpfXgYe3EAnvgrLyDx7soAQeBuXtQaAk4dEALw_wcB">
+            Войти через Facebook
+        </a>
+
+    </div>
+    <div class="modal-show__left-box">
+        <h3 class="feed-box-right-title modal-show__title">
+            Задать вопрос
+        </h3>
+        <div class="modal-show__inputs">
+
+        <form class="feed-box-form" action="https://echo.htmlacademy.ru/courses" method="post">
+            <label class="feed-box-label">
+                <input class="feed-box-input" type="text" minlength="2" name="user_name" placeholder="Ваше имя" autocomplete="off" required>
+            </label>
+            <br>
+            <label  class="feed-box-label">
+                <textarea class="feed-box-input feed-box-input--area" name="user_questions" cols="30" rows="10" placeholder="Опишите Ваш вопрос."></textarea>
+            </label>
+            <br>
+            <button class="feed-box-btn modal-show__btn" type="submit">Отправить </button>
+        </form>
+
+    </div>
+    </div>
+    </div>
+    </div>
+<script src="./js/main.js"></script>
 </body>
 
 </html>
